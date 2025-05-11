@@ -110,9 +110,9 @@ def app():
     img_file_buffer = st.file_uploader("", type=["bmp", "png", "jpg", "jpeg"])
     if img_file_buffer is not None:
         image = Image.open(img_file_buffer)
-        st.image(image, caption='Hình ảnh được tải lên', use_column_width=True)
+        st.image(image, caption='Hình ảnh được tải lên', use_container_width=True)
 
         if st.button('Loại bỏ Nhiễu Moire'):
             frame = np.array(image.convert('L'))  
             result_image = RemoveMoire(frame)
-            st.image(result_image, caption='Kết quả sau khi loại bỏ Nhiễu Moire', use_column_width=True)
+            st.image(result_image, caption='Kết quả sau khi loại bỏ Nhiễu Moire', use_container_width=True)

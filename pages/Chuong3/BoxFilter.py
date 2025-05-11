@@ -15,7 +15,7 @@ def app():
     img_file_buffer = st.file_uploader("", type=["bmp", "png", "jpg", "jpeg"])
     if img_file_buffer is not None:
         image = Image.open(img_file_buffer)
-        st.image(image, caption='Hình ảnh được tải lên', use_column_width=True)
+        st.image(image, caption='Hình ảnh được tải lên', use_container_width=True)
 
         frame = np.array(image)
 
@@ -30,4 +30,4 @@ def app():
                 frame_filtered = cv2.cvtColor(frame_filtered, cv2.COLOR_BGR2RGB)
             else:
                 frame_filtered = BoxFilter(frame)
-            st.image(frame_filtered, caption='Kết quả sau khi áp dụng Lọc Box', use_column_width=True)
+            st.image(frame_filtered, caption='Kết quả sau khi áp dụng Lọc Box', use_container_width=True)

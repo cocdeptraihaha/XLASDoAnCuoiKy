@@ -75,4 +75,4 @@ def app():
 
     if st.button('Vẽ Bộ Lọc Notch Reject'):
         filter_image = DrawNotchRejectFilter()
-        st.image(filter_image, caption='Bộ Lọc Notch Reject', use_column_width=True)
+        st.image(filter_image, caption='Bộ Lọc Notch Reject', use_container_width=True)

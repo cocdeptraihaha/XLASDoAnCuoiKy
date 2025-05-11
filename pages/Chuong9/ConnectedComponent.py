@@ -60,10 +60,10 @@ def app():
     img_file_buffer = st.file_uploader("", type=["bmp", "png", "jpg", "jpeg"])
     if img_file_buffer is not None:
         image = Image.open(img_file_buffer)
-        st.image(image, caption='Hình ảnh được tải lên', use_column_width=True)
+        st.image(image, caption='Hình ảnh được tải lên', use_container_width=True)
 
         frame = np.array(image.convert('L')) 
 
         if st.button('Đếm Thành Phần Liên Thông'):
             result_image = MyConnectedComponent(frame)
-            st.image(result_image, caption='Kết quả sau khi đếm', use_column_width=True)
+            st.image(result_image, caption='Kết quả sau khi đếm', use_container_width=True)

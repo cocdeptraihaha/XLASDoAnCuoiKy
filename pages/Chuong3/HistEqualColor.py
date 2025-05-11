@@ -18,11 +18,11 @@ def app():
     img_file_buffer = st.file_uploader("", type=["bmp", "png", "jpg", "jpeg"])
     if img_file_buffer is not None:
         image = Image.open(img_file_buffer)
-        st.image(image, caption='Hình ảnh được tải lên', use_column_width=True)
+        st.image(image, caption='Hình ảnh được tải lên', use_container_width=True)
 
         frame = np.array(image)
 
         if st.button('Cân bằng Histogram cho ảnh màu'):
             result_image = HistEqualColor(frame)
             result_image = cv2.resize(result_image, (frame.shape[1], frame.shape[0]))
-            st.image(result_image, caption='Kết quả sau khi cân bằng Histogram cho ảnh màu', use_column_width=True)
+            st.image(result_image, caption='Kết quả sau khi cân bằng Histogram cho ảnh màu', use_container_width=True)

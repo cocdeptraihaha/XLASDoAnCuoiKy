@@ -16,7 +16,7 @@ def app():
     img_file_buffer = st.file_uploader("", type=["bmp", "png", "jpg", "jpeg"])
     if img_file_buffer is not None:
         image = Image.open(img_file_buffer)
-        st.image(image, caption='Hình ảnh được tải lên', use_column_width=True)
+        st.image(image, caption='Hình ảnh được tải lên', use_container_width=True)
 
         frame = np.array(image)
 

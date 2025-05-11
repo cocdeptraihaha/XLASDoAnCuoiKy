@@ -142,7 +142,7 @@ if img_file_buffer is not None:
     image = Image.open(img_file_buffer)
     frame = np.array(image)  
     frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-    st.image(image, caption='Hình ảnh được tải lên', use_column_width=True)
+    st.image(image, caption='Hình ảnh được tải lên', use_container_width=True)
 
     if st.button('Nhận dạng'):
         frameHeight = frame.shape[0]

@@ -22,7 +22,7 @@ def app():
     img_file_buffer = st.file_uploader("", type=["bmp", "png", "jpg", "jpeg"])
     if img_file_buffer is not None:
         image = Image.open(img_file_buffer)
-        st.image(image, caption='Hình ảnh được tải lên', use_column_width=True)
+        st.image(image, caption='Hình ảnh được tải lên', use_container_width=True)
 
         frame = np.array(image)
 
@@ -30,4 +30,4 @@ def app():
             if len(frame.shape) == 3:
                 frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
             result_image = Sharpen(frame)
-            st.image(result_image, caption='Kết quả sau khi áp dụng Làm sắc nét', use_column_width=True)
+            st.image(result_image, caption='Kết quả sau khi áp dụng Làm sắc nét', use_container_width=True)

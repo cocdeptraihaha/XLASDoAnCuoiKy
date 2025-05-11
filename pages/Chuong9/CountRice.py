@@ -56,10 +56,10 @@ def app():
     img_file_buffer = st.file_uploader("", type=["bmp", "png", "jpg", "jpeg"])
     if img_file_buffer is not None:
         image = Image.open(img_file_buffer)
-        st.image(image, caption='Uploaded Image', use_column_width=True)
+        st.image(image, caption='Uploaded Image', use_container_width=True)
 
         frame = np.array(image.convert('L')) 
         if st.button('Count Rice'):
             result_image = CountRice(frame)
-            st.image(result_image, caption='Result after counting', use_column_width=True)
+            st.image(result_image, caption='Result after counting', use_container_width=True)
             st.write('Number of rice grains detected: {}'.format(np.max(result_image) - 150))
