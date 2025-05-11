@@ -17,7 +17,7 @@ image_base64 = get_image_as_base64("background_img.jpg")
 
 
 
-st.title("Xử Lý Ảnh Số - Đồ án cuối kỳ")
+st.title("Xử Lý Ảnh Số - Đồ án cuối kỳ📖")
 
 #menu
 with st.sidebar:
@@ -47,7 +47,7 @@ if selected == "Trang chủ":
         Xin cảm ơn thầy **ThS. Trần Tiến Đức** đã tận tình hướng dẫn và giúp đỡ chúng em trong quá trình học 
              tập và thực hiện đồ án. Chúc thầy thật nhiều sức khỏe và niềm vui.
     """)
-    st.image("background_img.jpg", caption="Digital Image Processing", use_column_width=True)
+    st.image("background_img.jpg", caption="Digital Image Processing", use_container_width=True)
 
 
 elif selected == "Nội dung Đồ án":
@@ -77,9 +77,11 @@ elif selected == "Liên hệ":
 
     - ***Nguyễn Đình Lợi***
         - **Email:** 22110181@student.hcmute.edu.vn
+        - **Số điện thoại:** 0362434303
 
     <br>
 
     - ***Nguyễn Thanh Tính***
         - **Email:** 22110247@student.hcmute.edu.vn
+        - **Số điện thoại:** 
     """, unsafe_allow_html=True)
