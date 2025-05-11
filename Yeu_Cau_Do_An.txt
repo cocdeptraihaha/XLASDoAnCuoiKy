@@ -1,0 +1,28 @@
+1: Nhận dạng 5 khuôn mặt
+2: Nhận dạng 5 đối tượng (5 trái cây)
+3:Xử lý ảnh
+	- Làm âm ảnh
+	- Logarit ảnh
+	- Lũy thừa ảnh
+	- Biến đổi ảnh tuyến tính từng phần
+	- Histogram
+	- Cân bằng Histogram
+	- Cân bằng Histogram bằng ảnh màu
+	- Local Histogram
+	- Lọc box
+	- Lọc Gauss
+	- Phân ngưỡng
+	- Lọc median
+	- Sharpen
+	- Gradient
+	- Spectrum
+	- Lọc trong miền tần số highpass filter
+	- Vẽ bộ lọc Notch Reject
+	- Xóa nhiễu Moire
+	- Tạo nhiễu chuyển động
+	- Gỡ nhiễu của ảnh có ít nhiễu
+	- Gỡ nhiễu của ảnh có nhiều nhiễu
+	- Đếm hạt gạo
+
+4: Xử lý nhận dạng hình ảnh có training 
+Chạy chương tình là chạy file Trang_Chủ.py trên Streamlit    python -m streamlit run 1_Trang_Chủ.py
