@@ -29,8 +29,7 @@
 
 1. **Clone repository**:
     ```bash
-    git clone https://github.com/yourusername/yourprojectname.git
-    cd [project link]
+    git clone https://github.com/cocdeptraihaha/XLASDoAnCuoiKy.git
     ```
 
 
