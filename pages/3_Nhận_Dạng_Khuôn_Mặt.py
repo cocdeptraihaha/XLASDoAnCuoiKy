@@ -67,13 +67,14 @@ def process_video_file(video_file):
     # Tạo file tạm thời để lưu video
     tfile = tempfile.NamedTemporaryFile(delete=False)
     tfile.write(video_file.read())
-    
+    tfile.close()  # Đảm bảo file đã được đóng
+
     # Mở video
     cap = cv.VideoCapture(tfile.name)
-    
+
     # Tạo placeholder để hiển thị video
     stframe = st.empty()
-    
+
     # Xử lý từng frame
     while cap.isOpened():
         ret, frame = cap.read()
@@ -109,14 +110,17 @@ def process_video_file(video_file):
                            color, 2)
                 cv.putText(frame, result, 
                           (int(coords[0]), int(coords[1]) - 10), 
-                          cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
+                          cv.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)   
         
         # Hiển thị frame
         stframe.image(frame, channels="BGR")
-    
-    # Giải phóng tài nguyên
+
     cap.release()
-    os.unlink(tfile.name)
+    stframe.empty()
+    try:
+        os.unlink(tfile.name)
+    except PermissionError:
+        pass
 
 # Tạo tabs
 tab1, tab2 = st.tabs(["Camera", "Video File"])
